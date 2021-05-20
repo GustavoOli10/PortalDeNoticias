@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Contato</title>
+    <link rel="stylesheet" href="styles/Estilo.css">
+    
+</head>
+
+  <body>
+
+    <header>
+        <h1>Portal de Noticias 01</h1>
+    </header>
+  
+
+    <nav>
+        <ul>
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Politica.html">Política</a></li>
+          <li><a href="Saude.html">Saúde</a></li>
+          <li><a href="Educacao.html">Educação</a></li>
+          <li><a href="Contato.html">Contato</a></li>
+        </ul>
+  
+  
+        <form>
+          <input type="search" name="q" placeholder="Proucurar">
+          <input type="submit" value="Proucurar">
+        </form>
+      </nav>
+
+    <main>
+
+      <article>
+
+        <h2>Fale conosco</h2>
+
+        <form>
+
+            <div class="contato">
+
+                <label for="nomeID"><b>Nome:</b></label>
+                <input type="text" name="nome" id="nomeID" required><br><br>
+                <label for="emailID"><b>Email:</b></label>
+                <input type="email" name="email" id="emailID" required><br><br>
+                <label for="comentarioID"><b></b></label>
+                <textarea rows="8" cols="54" name="comentário" id="comentarioID" required></textarea>
+
+                <br><br>
+                <input type="submit" onclick="Enviar()" value="Enviar">
+            </div>
+
+        </form> 
+      </article>
+
+    </main>
+
+    <script>
+        function Enviar(){
+            alert("E-mail enviado");
+        }
+    </script>
+
+    <footer>
+        <p>Desenvolvido por Gustavo Oliveira</p>
+      </footer>
+
+  </body>
+</html>
