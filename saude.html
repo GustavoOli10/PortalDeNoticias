@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
   <head>
     <meta charset="utf-8">
 
     <title>Saúde</title>
     <link rel="stylesheet" href="styles/Estilo.css">
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script>carregarNoticiasSaude();</script>
+
+    <script>
+      $(function() {
+          $("input").on("input.highlight", function() {
+          // Determine o termo de pesquisa especificado
+          var search = $(this).val();
+          // Highlight termo de pesquisa dentro de um contexto específico
+          $(".titulo").unmark().mark(search);
+          
+          }).trigger("input.highlight").focus();
+        });
+    </script>
 
   </head>
 
@@ -25,7 +39,7 @@
 
 
       <form>
-        <input type="search" name="q" placeholder="Proucurar">
+        <input type ="search" placeholder='Buscar por...'>
         <input type="submit" value="Proucurar">
       </form>
     </nav>
@@ -34,36 +48,36 @@
 
       <article>
 
-        <div class="box">
-          <a href="https://g1.globo.com/bemestar/vacina/noticia/2021/05/19/vacinas-contra-covid-19-so-chegarao-para-todo-mundo-no-fim-de-2023-no-ritmo-atual-calcula-editor-chefe-da-lancet.ghtml">
-            <img src="https://s2.glbimg.com/zuwLDd-LHhxmVYNBsXXMIA63yaw=/0x0:640x360/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/m/M/7lOlbqRcyKCNpsZGQHGQ/image001.jpg" 
-            title="Vacinas contra Covid-19 só chegarão para todo mundo no fim de 2023 no ritmo atual, calcula editor-chefe da Lancet" width="300" height="165"></a>
+        <h2> Principais noticias sobre saude </h2>
+        <h3 id= "categoriadaNoticiaSaude"></h3>
+        <p id="tituloNoticiaSaude" class="titulo"></p>
+        <p id="autorNoticiaSaude" class="autor"></p>
+        <p id="textoNoticiaSaude"></p>
+        <img src="images/Saude02.jpg" alt="" height="300" width="500">
 
-          <a href="https://g1.globo.com/ciencia-e-saude/viva-voce/noticia/2021/05/19/pesquisa-da-usp-analisa-impacto-da-inatividade-fisica-em-mulheres-durante-a-pandemia.ghtml">
-            <img src="https://s2.glbimg.com/QgU_fJZ230mMdatJlvmoXGo7rsE=/0x0:5888x3776/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/W/Q/UVn0YnQbqLN1c1iBi6Xg/7-na-mao-enquanto-corre.jpg" 
-            title="Pesquisa da USP analisa impacto da inatividade física em mulheres durante a pandemia" width="300" height="165"></a>
+        <h3 id= "categoriadaNoticiaSaude01"></h3>
+        <p id="tituloNoticiaSaude01" class="titulo"></p>
+        <p id="autorNoticiaSaude01" class="autor"></p>
+        <p id="textoNoticiaSaude01"></p>
+        <img src="images/Saude03.jpg" alt="" height="300" width="500">
 
-          <a href="https://g1.globo.com/bemestar/blog/longevidade-modo-de-usar/post/2021/05/18/novas-abordagens-terapeuticas-querem-reprogramar-as-celulas-para-que-rejuvenescam.ghtml">
-              <img src="https://s2.glbimg.com/EwggktNRJvlo-q2zD38xzYGjisM=/0x0:675x540/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/G/g/GM1xTgRJWWGTI8nDWCSA/jaysarkar.png" 
-              title="Novas abordagens terapêuticas querem reprogramar as células para que rejuvenesçam" width="300" height="165"></a>
-  
-          <a href="https://g1.globo.com/bemestar/vacina/noticia/2021/05/17/covid-19-como-a-crise-na-india-poe-em-risco-vacinacao-nos-paises-mais-pobres-do-mundo.ghtml">
-              <img src="https://s2.glbimg.com/_N-9V_CX6NdjJqvJpUq6ptVWAGQ=/0x0:800x450/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/2/i/AEMy4vRUGPJ2A2cvTyJw/118527360-ghana.jpeg" 
-              title="Covid-19: como a crise na Índia põe em risco vacinação nos países mais pobres do mundo" width="300" height="165"></a>
-        </div>
-        
+        <h3 id= "categoriadaNoticiaSaude02"></h3>
+        <p id="tituloNoticiaSaude02" class="titulo"></p>
+        <p id="autorNoticiaSaude02" class="autor"></p>
+        <p id="textoNoticiaSaude02"></p>
+        <img src="images/Saude04.png" alt="" height="300" width="500">
+
       </article>
 
       <aside>
 
         <h2>Internacional</h2>
 
-        <a href="https://g1.globo.com/mundo/noticia/2021/05/19/israel-e-atingida-por-foguetes-disparados-do-libano-e-responde-com-bombardeio.ghtml"><p></p>Israel</a>
-        <a href="https://g1.globo.com/bemestar/coronavirus/noticia/2021/05/19/india-registra-recorde-de-4529-mortes-por-covid-19-em-24-horas.ghtml"><p></p>India</a>
-        <a href="https://g1.globo.com/mundo/noticia/2021/05/19/a-trump-organization-e-investigada-criminalmente-anuncia-procurador-geral-do-estado-de-ny.ghtml"><p></p>Estados Unidos</a>
-        <a href="https://g1.globo.com/mundo/noticia/2021/05/18/a-prostituta-colombiana-que-venceu-na-justica-um-dos-maiores-bordeis-da-espanha.ghtml"><p></p>Espanha</a>
-        <a href="https://g1.globo.com/bemestar/coronavirus/noticia/2021/05/18/argentina-tem-recorde-diario-de-35-mil-casos-e-745-mortes-por-covid.ghtml"><p></p>Argentina</a>
-        <a href="https://g1.globo.com/mundo/noticia/2021/05/18/1o-prefeito-nao-binario-do-reino-unido-e-eleito-no-pais-de-gales.ghtml"><p></p>Pais de Gales</a>
+        <a href="https://g1.globo.com/pop-arte/noticia/2021/06/27/historia-apagou-o-quanto-os-africanos-escravizados-enriqueceram-o-brasil-diz-laurentino-gomes.ghtml">Educação</a>
+        <br>
+        <a href="https://g1.globo.com/mundo/noticia/2021/07/03/brasileiros-protestam-na-europa-e-fora-bolsonaro-aparece-no-tour-de-france.ghtml">Politica</a>
+        <br>
+        <a href="https://g1.globo.com/mundo/noticia/2021/07/02/covid-por-que-uso-de-mascara-voltou-a-ser-recomendado-em-partes-dos-eua.ghtml#G1-FEED-MUNDO-user-sel-8,editorial,00487e4f-d5fc-49f4-b1bc-c734f96d5eb9">Saúde</a>
 
       </aside>
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/Estilo.css">
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="scripts/env.js"></script>
+    <script src="scripts/autenticacao.js"></script>
+
+
+    <style>
+    #telalogin{
+        text-align: center;
+    }
+    </style>
+    
+</head>
+
+  <body>
+
+    <header>
+        <h1>Portal de Noticias 01</h1>
+    </header>
+
+    <nav>
+        <ul>
+  
+          <li><a href="Index.html">Home</a></li>
+          <li><a href="Politica.html">Política</a></li>
+          <li><a href="Saude.html">Saúde</a></li>
+          <li><a href="Educacao.html">Educação</a></li>
+          <li><a href="Contato.html">Contato</a></li>
+          <li><a href="Login.html">Login</a></li>
+          <li><a href="Cadastro.html">Cadastro</a></li>
+          
+        </ul>
+  
+  
+        <form>
+          <input type ="search" placeholder='Buscar por...'>
+          <input type="submit" value="Proucurar">
+        </form>
+      </nav>
+
+    <main>
+
+      <article>
+        <h2>Login</h2>
+        
+        <div id="telaLogin">
+
+        <form>
+        <p id="erroAutenticar"></p>
+        <p id="sucessoAutenticar"></p>
+        
+        <label for="loginEmail"><b>Email:</b></label>
+        <input type="email" id="loginEmail" placeholder="example@gmail.com" required><br><br>
+        <label for="loginSenha"><b>Senha:</b></label>
+        <input type="password" id="loginSenha" placeholder="senha" required><br><br>
+        
+
+        <br><br>
+        <input type="submit" onClick="validarAutenticacao(event);" value="Logar"> 
+        </div>
+
+        </form> 
+      </article>
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Gustavo Oliveira</p>
+      </footer>
+
+
+  </body>
+</html>
